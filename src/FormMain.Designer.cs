@@ -30,10 +30,6 @@ namespace VisualTranslate
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnOriginalLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTargetLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnLocked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.button_loadOriginalLanguage = new System.Windows.Forms.Button();
             this.button_loadTargetLanguage = new System.Windows.Forms.Button();
             this.label_originalLanguage = new System.Windows.Forms.Label();
@@ -46,6 +42,10 @@ namespace VisualTranslate
             this.label_saved = new System.Windows.Forms.Label();
             this.label_untranslatedCount = new System.Windows.Forms.Label();
             this.button_reload = new System.Windows.Forms.Button();
+            this.ColumnKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnOriginalLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTargetLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLocked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,33 +67,7 @@ namespace VisualTranslate
             this.dataGridView1.Size = new System.Drawing.Size(944, 524);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
-            // 
-            // ColumnKey
-            // 
-            this.ColumnKey.HeaderText = "键";
-            this.ColumnKey.Name = "ColumnKey";
-            this.ColumnKey.ReadOnly = true;
-            this.ColumnKey.Width = 350;
-            // 
-            // ColumnOriginalLanguage
-            // 
-            this.ColumnOriginalLanguage.HeaderText = "源语言";
-            this.ColumnOriginalLanguage.Name = "ColumnOriginalLanguage";
-            this.ColumnOriginalLanguage.ReadOnly = true;
-            this.ColumnOriginalLanguage.Width = 250;
-            // 
-            // ColumnTargetLanguage
-            // 
-            this.ColumnTargetLanguage.HeaderText = "目标语言";
-            this.ColumnTargetLanguage.Name = "ColumnTargetLanguage";
-            this.ColumnTargetLanguage.Width = 250;
-            // 
-            // ColumnLocked
-            // 
-            this.ColumnLocked.HeaderText = "锁定";
-            this.ColumnLocked.Name = "ColumnLocked";
-            this.ColumnLocked.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnLocked.Width = 50;
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // button_loadOriginalLanguage
             // 
@@ -211,6 +185,34 @@ namespace VisualTranslate
             this.button_reload.UseVisualStyleBackColor = true;
             this.button_reload.Click += new System.EventHandler(this.button_reload_Click);
             // 
+            // ColumnKey
+            // 
+            this.ColumnKey.HeaderText = "键";
+            this.ColumnKey.Name = "ColumnKey";
+            this.ColumnKey.ReadOnly = true;
+            this.ColumnKey.Width = 350;
+            // 
+            // ColumnOriginalLanguage
+            // 
+            this.ColumnOriginalLanguage.HeaderText = "源语言";
+            this.ColumnOriginalLanguage.Name = "ColumnOriginalLanguage";
+            this.ColumnOriginalLanguage.ReadOnly = true;
+            this.ColumnOriginalLanguage.Width = 250;
+            // 
+            // ColumnTargetLanguage
+            // 
+            this.ColumnTargetLanguage.HeaderText = "目标语言";
+            this.ColumnTargetLanguage.Name = "ColumnTargetLanguage";
+            this.ColumnTargetLanguage.ReadOnly = true;
+            this.ColumnTargetLanguage.Width = 250;
+            // 
+            // ColumnLocked
+            // 
+            this.ColumnLocked.HeaderText = "锁定";
+            this.ColumnLocked.Name = "ColumnLocked";
+            this.ColumnLocked.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnLocked.Width = 50;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -253,14 +255,14 @@ namespace VisualTranslate
         private System.Windows.Forms.Button button_settings;
         private System.Windows.Forms.Button button_saveAs;
         private System.Windows.Forms.Button button_save;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnKey;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnOriginalLanguage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTargetLanguage;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnLocked;
         private System.Windows.Forms.Label label_keyCount;
         private System.Windows.Forms.Label label_saved;
         private System.Windows.Forms.Label label_untranslatedCount;
         private System.Windows.Forms.Button button_reload;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnKey;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnOriginalLanguage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTargetLanguage;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnLocked;
     }
 }
 

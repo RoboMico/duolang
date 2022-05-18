@@ -18,8 +18,6 @@ namespace VisualTranslate
         }
         public static bool ignoreSameValue = true;
         public static LockedValueSaveSettings saveLockedValues = LockedValueSaveSettings.NotEmpty;
-        public static Color emptyKeyColor = ColorTranslator.FromHtml("#C8C8C8");
         public static Color untranslatedColor = ColorTranslator.FromHtml("#D5B32B");
-        public static Color originalNotExistColor = ColorTranslator.FromHtml("#DD2222");
     }
 }

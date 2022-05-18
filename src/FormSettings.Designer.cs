@@ -32,12 +32,8 @@ namespace VisualTranslate
             this.components = new System.ComponentModel.Container();
             this.checkBox_ignoreSameValue = new System.Windows.Forms.CheckBox();
             this.textBox_colorTargetUntranslated = new System.Windows.Forms.TextBox();
-            this.textBox_colorEmptyKey = new System.Windows.Forms.TextBox();
             this.toolTip_ignoreSameValue = new System.Windows.Forms.ToolTip(this.components);
-            this.label_colorEmptyTranslation = new System.Windows.Forms.Label();
             this.label_colorTargetUntranslated = new System.Windows.Forms.Label();
-            this.label_colorOriginalNotExist = new System.Windows.Forms.Label();
-            this.textBox_colorOriginalNotExist = new System.Windows.Forms.TextBox();
             this.radioButton_never = new System.Windows.Forms.RadioButton();
             this.groupBox_basic = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -74,24 +70,6 @@ namespace VisualTranslate
             this.textBox_colorTargetUntranslated.Text = "#D5B32B";
             this.textBox_colorTargetUntranslated.DoubleClick += new System.EventHandler(this.textBox_colorTargetUntranslated_DoubleClick);
             // 
-            // textBox_colorEmptyKey
-            // 
-            this.textBox_colorEmptyKey.Location = new System.Drawing.Point(153, 45);
-            this.textBox_colorEmptyKey.Name = "textBox_colorEmptyKey";
-            this.textBox_colorEmptyKey.Size = new System.Drawing.Size(100, 23);
-            this.textBox_colorEmptyKey.TabIndex = 6;
-            this.textBox_colorEmptyKey.Text = "#C8C8C8";
-            this.textBox_colorEmptyKey.DoubleClick += new System.EventHandler(this.textBox_colorEmptyKey_DoubleClick);
-            // 
-            // label_colorEmptyTranslation
-            // 
-            this.label_colorEmptyTranslation.AutoSize = true;
-            this.label_colorEmptyTranslation.Location = new System.Drawing.Point(6, 48);
-            this.label_colorEmptyTranslation.Name = "label_colorEmptyTranslation";
-            this.label_colorEmptyTranslation.Size = new System.Drawing.Size(44, 17);
-            this.label_colorEmptyTranslation.TabIndex = 5;
-            this.label_colorEmptyTranslation.Text = "空翻译";
-            // 
             // label_colorTargetUntranslated
             // 
             this.label_colorTargetUntranslated.AutoSize = true;
@@ -100,24 +78,6 @@ namespace VisualTranslate
             this.label_colorTargetUntranslated.Size = new System.Drawing.Size(92, 17);
             this.label_colorTargetUntranslated.TabIndex = 6;
             this.label_colorTargetUntranslated.Text = "目标语言未翻译";
-            // 
-            // label_colorOriginalNotExist
-            // 
-            this.label_colorOriginalNotExist.AutoSize = true;
-            this.label_colorOriginalNotExist.Location = new System.Drawing.Point(6, 77);
-            this.label_colorOriginalNotExist.Name = "label_colorOriginalNotExist";
-            this.label_colorOriginalNotExist.Size = new System.Drawing.Size(80, 17);
-            this.label_colorOriginalNotExist.TabIndex = 8;
-            this.label_colorOriginalNotExist.Text = "源语言不存在";
-            // 
-            // textBox_colorOriginalNotExist
-            // 
-            this.textBox_colorOriginalNotExist.Location = new System.Drawing.Point(153, 74);
-            this.textBox_colorOriginalNotExist.Name = "textBox_colorOriginalNotExist";
-            this.textBox_colorOriginalNotExist.Size = new System.Drawing.Size(100, 23);
-            this.textBox_colorOriginalNotExist.TabIndex = 7;
-            this.textBox_colorOriginalNotExist.Text = "#DD2222";
-            this.textBox_colorOriginalNotExist.DoubleClick += new System.EventHandler(this.textBox_colorOriginalNotExist_DoubleClick);
             // 
             // radioButton_never
             // 
@@ -187,13 +147,9 @@ namespace VisualTranslate
             // 
             this.groupBox_colors.Controls.Add(this.textBox_colorTargetUntranslated);
             this.groupBox_colors.Controls.Add(this.label_colorTargetUntranslated);
-            this.groupBox_colors.Controls.Add(this.textBox_colorEmptyKey);
-            this.groupBox_colors.Controls.Add(this.textBox_colorOriginalNotExist);
-            this.groupBox_colors.Controls.Add(this.label_colorOriginalNotExist);
-            this.groupBox_colors.Controls.Add(this.label_colorEmptyTranslation);
             this.groupBox_colors.Location = new System.Drawing.Point(18, 167);
             this.groupBox_colors.Name = "groupBox_colors";
-            this.groupBox_colors.Size = new System.Drawing.Size(265, 110);
+            this.groupBox_colors.Size = new System.Drawing.Size(265, 50);
             this.groupBox_colors.TabIndex = 13;
             this.groupBox_colors.TabStop = false;
             this.groupBox_colors.Text = "颜色";
@@ -201,7 +157,7 @@ namespace VisualTranslate
             // linkLabel_checkSources
             // 
             this.linkLabel_checkSources.AutoSize = true;
-            this.linkLabel_checkSources.Location = new System.Drawing.Point(12, 280);
+            this.linkLabel_checkSources.Location = new System.Drawing.Point(12, 230);
             this.linkLabel_checkSources.Name = "linkLabel_checkSources";
             this.linkLabel_checkSources.Size = new System.Drawing.Size(372, 17);
             this.linkLabel_checkSources.TabIndex = 8;
@@ -213,7 +169,7 @@ namespace VisualTranslate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 311);
+            this.ClientSize = new System.Drawing.Size(395, 257);
             this.Controls.Add(this.linkLabel_checkSources);
             this.Controls.Add(this.groupBox_colors);
             this.Controls.Add(this.groupBox_basic);
@@ -239,12 +195,8 @@ namespace VisualTranslate
 
         private System.Windows.Forms.CheckBox checkBox_ignoreSameValue;
         private System.Windows.Forms.TextBox textBox_colorTargetUntranslated;
-        private System.Windows.Forms.TextBox textBox_colorEmptyKey;
         private System.Windows.Forms.ToolTip toolTip_ignoreSameValue;
-        private System.Windows.Forms.Label label_colorEmptyTranslation;
         private System.Windows.Forms.Label label_colorTargetUntranslated;
-        private System.Windows.Forms.Label label_colorOriginalNotExist;
-        private System.Windows.Forms.TextBox textBox_colorOriginalNotExist;
         private System.Windows.Forms.RadioButton radioButton_never;
         private System.Windows.Forms.GroupBox groupBox_basic;
         private System.Windows.Forms.GroupBox groupBox_colors;

@@ -19,16 +19,6 @@ namespace VisualTranslate
             InitializeComponent();
         }
 
-        private void textBox_colorEmptyKey_DoubleClick(object sender, EventArgs e)
-        {
-            ColorDialog colorDialog = new();
-            if (colorDialog.ShowDialog() == DialogResult.OK)
-            {
-                textBox_colorEmptyKey.Text = ColorTranslator.ToHtml(colorDialog.Color);
-                Settings.emptyKeyColor = colorDialog.Color;
-            }
-        }
-
         private void textBox_colorTargetUntranslated_DoubleClick(object sender, EventArgs e)
         {
             ColorDialog colorDialog = new();
@@ -39,21 +29,12 @@ namespace VisualTranslate
             }
         }
 
-        private void textBox_colorOriginalNotExist_DoubleClick(object sender, EventArgs e)
-        {
-            ColorDialog colorDialog = new();
-            if (colorDialog.ShowDialog() == DialogResult.OK)
-            {
-                textBox_colorOriginalNotExist.Text = ColorTranslator.ToHtml(colorDialog.Color);
-                Settings.originalNotExistColor = colorDialog.Color;
-            }
-        }
 
         private void linkLabel_checkSources_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("explorer.exe",
                 easter >= 10 ? "https://afdian.net/@MineCommander" //打钱
-                : "https://gitlab.com/MineCommander/visual-translate");
+                : "https://gitlab.com/MineCommander/vtd");
         }
 
         private void FormSettings_KeyDown(object sender, KeyEventArgs e)
