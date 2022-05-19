@@ -1,5 +1,5 @@
-# Visual Translate DuoLang
+# DuoLang
 
-A light-weight language files proofreading app. Allows you to quickly compare and proofread two languages and make simple edits.
+轻量级计算机辅助翻译（CAT）程序，为JSON文件设计。可用于软件/游戏/Web应用等的语言文件校对和翻译。
 
-See also: [Visual Translate Studio](https://gitlab.com/MineCommander/vts)
+此软件使用[反资本主义软件许可证（ACSL）](https://anticapitalist.software/)，如果你是企业用户且想要使用这款软件，请详细阅读此许可证，否则可能面临**法律诉讼**。

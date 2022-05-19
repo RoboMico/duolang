@@ -1,5 +1,5 @@
 ﻿
-namespace VisualTranslate
+namespace DuoLang
 {
     partial class FormMain
     {
@@ -29,161 +29,54 @@ namespace VisualTranslate
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button_loadOriginalLanguage = new System.Windows.Forms.Button();
-            this.button_loadTargetLanguage = new System.Windows.Forms.Button();
-            this.label_originalLanguage = new System.Windows.Forms.Label();
-            this.label_targetLanguage = new System.Windows.Forms.Label();
-            this.button_log = new System.Windows.Forms.Button();
-            this.button_settings = new System.Windows.Forms.Button();
-            this.button_saveAs = new System.Windows.Forms.Button();
-            this.button_save = new System.Windows.Forms.Button();
-            this.label_keyCount = new System.Windows.Forms.Label();
-            this.label_saved = new System.Windows.Forms.Label();
-            this.label_untranslatedCount = new System.Windows.Forms.Label();
-            this.button_reload = new System.Windows.Forms.Button();
+            this.dataGridView_main = new System.Windows.Forms.DataGridView();
             this.ColumnKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnOriginalLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTargetLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnLocked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip_main = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem_file = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_loadSourceLanguage = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_loadTargetLanguage = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_reload = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_save = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_saveAs = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_tool = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_settings = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_openLogs = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip_main = new System.Windows.Forms.StatusStrip();
+            this.statusStripStatusLabel_totalKeys = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStripStatusLabel_placeTaker = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStripStatusLabel_translated = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStripStatusLabel_saved = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStripStatusLabel_progress = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStripProgressBar_progress = new System.Windows.Forms.ToolStripProgressBar();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_main)).BeginInit();
+            this.menuStrip_main.SuspendLayout();
+            this.statusStrip_main.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView_main
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView_main.AllowUserToAddRows = false;
+            this.dataGridView_main.AllowUserToDeleteRows = false;
+            this.dataGridView_main.AllowUserToOrderColumns = true;
+            this.dataGridView_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_main.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_main.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnKey,
             this.ColumnOriginalLanguage,
-            this.ColumnTargetLanguage,
-            this.ColumnLocked});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(944, 524);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
-            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
-            // 
-            // button_loadOriginalLanguage
-            // 
-            this.button_loadOriginalLanguage.Location = new System.Drawing.Point(12, 19);
-            this.button_loadOriginalLanguage.Name = "button_loadOriginalLanguage";
-            this.button_loadOriginalLanguage.Size = new System.Drawing.Size(100, 28);
-            this.button_loadOriginalLanguage.TabIndex = 1;
-            this.button_loadOriginalLanguage.Text = "加载源语言";
-            this.button_loadOriginalLanguage.UseVisualStyleBackColor = true;
-            this.button_loadOriginalLanguage.Click += new System.EventHandler(this.button_loadOriginalLanguage_Click);
-            // 
-            // button_loadTargetLanguage
-            // 
-            this.button_loadTargetLanguage.Location = new System.Drawing.Point(12, 53);
-            this.button_loadTargetLanguage.Name = "button_loadTargetLanguage";
-            this.button_loadTargetLanguage.Size = new System.Drawing.Size(100, 28);
-            this.button_loadTargetLanguage.TabIndex = 2;
-            this.button_loadTargetLanguage.Text = "加载目标语言";
-            this.button_loadTargetLanguage.UseVisualStyleBackColor = true;
-            this.button_loadTargetLanguage.Click += new System.EventHandler(this.button_loadTargetLanguage_Click);
-            // 
-            // label_originalLanguage
-            // 
-            this.label_originalLanguage.AutoSize = true;
-            this.label_originalLanguage.Location = new System.Drawing.Point(118, 25);
-            this.label_originalLanguage.Name = "label_originalLanguage";
-            this.label_originalLanguage.Size = new System.Drawing.Size(44, 17);
-            this.label_originalLanguage.TabIndex = 3;
-            this.label_originalLanguage.Text = "未加载";
-            // 
-            // label_targetLanguage
-            // 
-            this.label_targetLanguage.AutoSize = true;
-            this.label_targetLanguage.Location = new System.Drawing.Point(118, 59);
-            this.label_targetLanguage.Name = "label_targetLanguage";
-            this.label_targetLanguage.Size = new System.Drawing.Size(44, 17);
-            this.label_targetLanguage.TabIndex = 4;
-            this.label_targetLanguage.Text = "未加载";
-            // 
-            // button_log
-            // 
-            this.button_log.Location = new System.Drawing.Point(856, 53);
-            this.button_log.Name = "button_log";
-            this.button_log.Size = new System.Drawing.Size(100, 28);
-            this.button_log.TabIndex = 5;
-            this.button_log.Text = "日志";
-            this.button_log.UseVisualStyleBackColor = true;
-            this.button_log.Click += new System.EventHandler(this.button_log_Click);
-            // 
-            // button_settings
-            // 
-            this.button_settings.Location = new System.Drawing.Point(856, 19);
-            this.button_settings.Name = "button_settings";
-            this.button_settings.Size = new System.Drawing.Size(100, 28);
-            this.button_settings.TabIndex = 6;
-            this.button_settings.Text = "设置";
-            this.button_settings.UseVisualStyleBackColor = true;
-            this.button_settings.Click += new System.EventHandler(this.button_settings_Click);
-            // 
-            // button_saveAs
-            // 
-            this.button_saveAs.Location = new System.Drawing.Point(750, 53);
-            this.button_saveAs.Name = "button_saveAs";
-            this.button_saveAs.Size = new System.Drawing.Size(100, 28);
-            this.button_saveAs.TabIndex = 7;
-            this.button_saveAs.Text = "另存为";
-            this.button_saveAs.UseVisualStyleBackColor = true;
-            this.button_saveAs.Click += new System.EventHandler(this.button_saveAs_Click);
-            // 
-            // button_save
-            // 
-            this.button_save.Location = new System.Drawing.Point(750, 19);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(100, 28);
-            this.button_save.TabIndex = 8;
-            this.button_save.Text = "保存";
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
-            // 
-            // label_keyCount
-            // 
-            this.label_keyCount.AutoSize = true;
-            this.label_keyCount.Location = new System.Drawing.Point(13, 644);
-            this.label_keyCount.Name = "label_keyCount";
-            this.label_keyCount.Size = new System.Drawing.Size(75, 17);
-            this.label_keyCount.TabIndex = 9;
-            this.label_keyCount.Text = "翻译键数量: ";
-            // 
-            // label_saved
-            // 
-            this.label_saved.AutoSize = true;
-            this.label_saved.Location = new System.Drawing.Point(912, 644);
-            this.label_saved.Name = "label_saved";
-            this.label_saved.Size = new System.Drawing.Size(44, 17);
-            this.label_saved.TabIndex = 10;
-            this.label_saved.Text = "已保存";
-            this.label_saved.Visible = false;
-            // 
-            // label_untranslatedCount
-            // 
-            this.label_untranslatedCount.AutoSize = true;
-            this.label_untranslatedCount.Location = new System.Drawing.Point(287, 644);
-            this.label_untranslatedCount.Name = "label_untranslatedCount";
-            this.label_untranslatedCount.Size = new System.Drawing.Size(75, 17);
-            this.label_untranslatedCount.TabIndex = 11;
-            this.label_untranslatedCount.Text = "未翻译数量: ";
-            // 
-            // button_reload
-            // 
-            this.button_reload.Location = new System.Drawing.Point(644, 19);
-            this.button_reload.Name = "button_reload";
-            this.button_reload.Size = new System.Drawing.Size(100, 28);
-            this.button_reload.TabIndex = 12;
-            this.button_reload.Text = "重新加载";
-            this.button_reload.UseVisualStyleBackColor = true;
-            this.button_reload.Click += new System.EventHandler(this.button_reload_Click);
+            this.ColumnTargetLanguage});
+            this.dataGridView_main.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView_main.Name = "dataGridView_main";
+            this.dataGridView_main.ReadOnly = true;
+            this.dataGridView_main.RowTemplate.Height = 25;
+            this.dataGridView_main.Size = new System.Drawing.Size(968, 621);
+            this.dataGridView_main.TabIndex = 0;
+            this.dataGridView_main.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_main_CellMouseDoubleClick);
             // 
             // ColumnKey
             // 
@@ -206,39 +99,180 @@ namespace VisualTranslate
             this.ColumnTargetLanguage.ReadOnly = true;
             this.ColumnTargetLanguage.Width = 250;
             // 
-            // ColumnLocked
+            // menuStrip_main
             // 
-            this.ColumnLocked.HeaderText = "锁定";
-            this.ColumnLocked.Name = "ColumnLocked";
-            this.ColumnLocked.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnLocked.Width = 50;
+            this.menuStrip_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_file,
+            this.toolStripMenuItem_edit,
+            this.toolStripMenuItem_tool});
+            this.menuStrip_main.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip_main.Name = "menuStrip_main";
+            this.menuStrip_main.Size = new System.Drawing.Size(968, 25);
+            this.menuStrip_main.TabIndex = 13;
+            this.menuStrip_main.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem_file
+            // 
+            this.toolStripMenuItem_file.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_loadSourceLanguage,
+            this.toolStripMenuItem_loadTargetLanguage,
+            this.toolStripMenuItem_reload,
+            this.toolStripMenuItem_save,
+            this.toolStripMenuItem_saveAs});
+            this.toolStripMenuItem_file.Name = "toolStripMenuItem_file";
+            this.toolStripMenuItem_file.Size = new System.Drawing.Size(44, 21);
+            this.toolStripMenuItem_file.Text = "文件";
+            // 
+            // toolStripMenuItem_loadSourceLanguage
+            // 
+            this.toolStripMenuItem_loadSourceLanguage.Name = "toolStripMenuItem_loadSourceLanguage";
+            this.toolStripMenuItem_loadSourceLanguage.ShortcutKeyDisplayString = "Ctrl+I";
+            this.toolStripMenuItem_loadSourceLanguage.Size = new System.Drawing.Size(195, 22);
+            this.toolStripMenuItem_loadSourceLanguage.Text = "加载源语言";
+            this.toolStripMenuItem_loadSourceLanguage.Click += new System.EventHandler(this.toolStripMenuItem_loadSourceLanguage_Click);
+            // 
+            // toolStripMenuItem_loadTargetLanguage
+            // 
+            this.toolStripMenuItem_loadTargetLanguage.Name = "toolStripMenuItem_loadTargetLanguage";
+            this.toolStripMenuItem_loadTargetLanguage.ShortcutKeyDisplayString = "Ctrl+O";
+            this.toolStripMenuItem_loadTargetLanguage.Size = new System.Drawing.Size(195, 22);
+            this.toolStripMenuItem_loadTargetLanguage.Text = "加载目标语言";
+            this.toolStripMenuItem_loadTargetLanguage.Click += new System.EventHandler(this.toolStripMenuItem_loadTargetLanguage_Click);
+            // 
+            // toolStripMenuItem_reload
+            // 
+            this.toolStripMenuItem_reload.Name = "toolStripMenuItem_reload";
+            this.toolStripMenuItem_reload.ShortcutKeyDisplayString = "Ctrl+R";
+            this.toolStripMenuItem_reload.Size = new System.Drawing.Size(195, 22);
+            this.toolStripMenuItem_reload.Text = "重新加载";
+            this.toolStripMenuItem_reload.Click += new System.EventHandler(this.toolStripMenuItem_reload_Click);
+            // 
+            // toolStripMenuItem_save
+            // 
+            this.toolStripMenuItem_save.Name = "toolStripMenuItem_save";
+            this.toolStripMenuItem_save.ShortcutKeyDisplayString = "Ctrl+S";
+            this.toolStripMenuItem_save.Size = new System.Drawing.Size(195, 22);
+            this.toolStripMenuItem_save.Text = "保存";
+            this.toolStripMenuItem_save.Click += new System.EventHandler(this.toolStripMenuItem_save_Click);
+            // 
+            // toolStripMenuItem_saveAs
+            // 
+            this.toolStripMenuItem_saveAs.Name = "toolStripMenuItem_saveAs";
+            this.toolStripMenuItem_saveAs.ShortcutKeyDisplayString = "Ctrl+Shift+S";
+            this.toolStripMenuItem_saveAs.Size = new System.Drawing.Size(195, 22);
+            this.toolStripMenuItem_saveAs.Text = "另存为";
+            this.toolStripMenuItem_saveAs.Click += new System.EventHandler(this.toolStripMenuItem_saveAs_Click);
+            // 
+            // toolStripMenuItem_edit
+            // 
+            this.toolStripMenuItem_edit.Name = "toolStripMenuItem_edit";
+            this.toolStripMenuItem_edit.Size = new System.Drawing.Size(44, 21);
+            this.toolStripMenuItem_edit.Text = "编辑";
+            // 
+            // toolStripMenuItem_tool
+            // 
+            this.toolStripMenuItem_tool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_settings,
+            this.toolStripMenuItem_openLogs});
+            this.toolStripMenuItem_tool.Name = "toolStripMenuItem_tool";
+            this.toolStripMenuItem_tool.Size = new System.Drawing.Size(44, 21);
+            this.toolStripMenuItem_tool.Text = "工具";
+            // 
+            // toolStripMenuItem_settings
+            // 
+            this.toolStripMenuItem_settings.Name = "toolStripMenuItem_settings";
+            this.toolStripMenuItem_settings.ShortcutKeyDisplayString = "Ctrl+,";
+            this.toolStripMenuItem_settings.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItem_settings.Text = "设置";
+            this.toolStripMenuItem_settings.Click += new System.EventHandler(this.toolStripMenuItem_settings_Click);
+            // 
+            // toolStripMenuItem_openLogs
+            // 
+            this.toolStripMenuItem_openLogs.Name = "toolStripMenuItem_openLogs";
+            this.toolStripMenuItem_openLogs.ShortcutKeyDisplayString = "Ctrl+L";
+            this.toolStripMenuItem_openLogs.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItem_openLogs.Text = "查看日志";
+            this.toolStripMenuItem_openLogs.Click += new System.EventHandler(this.toolStripMenuItem_openLogs_Click);
+            // 
+            // statusStrip_main
+            // 
+            this.statusStrip_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStripStatusLabel_totalKeys,
+            this.statusStripStatusLabel_placeTaker,
+            this.statusStripStatusLabel_translated,
+            this.toolStripStatusLabel1,
+            this.statusStripStatusLabel_saved,
+            this.statusStripStatusLabel_progress,
+            this.statusStripProgressBar_progress});
+            this.statusStrip_main.Location = new System.Drawing.Point(0, 652);
+            this.statusStrip_main.Name = "statusStrip_main";
+            this.statusStrip_main.Size = new System.Drawing.Size(968, 22);
+            this.statusStrip_main.TabIndex = 14;
+            this.statusStrip_main.Text = "statusStrip1";
+            // 
+            // statusStripStatusLabel_totalKeys
+            // 
+            this.statusStripStatusLabel_totalKeys.Name = "statusStripStatusLabel_totalKeys";
+            this.statusStripStatusLabel_totalKeys.Size = new System.Drawing.Size(80, 17);
+            this.statusStripStatusLabel_totalKeys.Text = "翻译键数量：";
+            // 
+            // statusStripStatusLabel_placeTaker
+            // 
+            this.statusStripStatusLabel_placeTaker.Name = "statusStripStatusLabel_placeTaker";
+            this.statusStripStatusLabel_placeTaker.Size = new System.Drawing.Size(24, 17);
+            this.statusStripStatusLabel_placeTaker.Text = "    ";
+            // 
+            // statusStripStatusLabel_translated
+            // 
+            this.statusStripStatusLabel_translated.Name = "statusStripStatusLabel_translated";
+            this.statusStripStatusLabel_translated.Size = new System.Drawing.Size(56, 17);
+            this.statusStripStatusLabel_translated.Text = "已翻译：";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(595, 17);
+            this.toolStripStatusLabel1.Spring = true;
+            this.toolStripStatusLabel1.Text = "    ";
+            // 
+            // statusStripStatusLabel_saved
+            // 
+            this.statusStripStatusLabel_saved.Name = "statusStripStatusLabel_saved";
+            this.statusStripStatusLabel_saved.Size = new System.Drawing.Size(44, 17);
+            this.statusStripStatusLabel_saved.Text = "已保存";
+            this.statusStripStatusLabel_saved.Visible = false;
+            // 
+            // statusStripStatusLabel_progress
+            // 
+            this.statusStripStatusLabel_progress.Name = "statusStripStatusLabel_progress";
+            this.statusStripStatusLabel_progress.Size = new System.Drawing.Size(96, 17);
+            this.statusStripStatusLabel_progress.Text = "翻译进度：0.0%";
+            // 
+            // statusStripProgressBar_progress
+            // 
+            this.statusStripProgressBar_progress.Name = "statusStripProgressBar_progress";
+            this.statusStripProgressBar_progress.Size = new System.Drawing.Size(100, 16);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 674);
-            this.Controls.Add(this.button_reload);
-            this.Controls.Add(this.label_untranslatedCount);
-            this.Controls.Add(this.label_saved);
-            this.Controls.Add(this.label_keyCount);
-            this.Controls.Add(this.button_save);
-            this.Controls.Add(this.button_saveAs);
-            this.Controls.Add(this.button_settings);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button_log);
-            this.Controls.Add(this.label_targetLanguage);
-            this.Controls.Add(this.label_originalLanguage);
-            this.Controls.Add(this.button_loadTargetLanguage);
-            this.Controls.Add(this.button_loadOriginalLanguage);
+            this.Controls.Add(this.statusStrip_main);
+            this.Controls.Add(this.dataGridView_main);
+            this.Controls.Add(this.menuStrip_main);
             this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip_main;
             this.Name = "FormMain";
-            this.Text = "VisualTranslate";
+            this.Text = "DuoLang";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
-            this.SizeChanged += new System.EventHandler(this.FormMain_SizeChanged);
             this.DoubleClick += new System.EventHandler(this.FormMain_DoubleClick);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_main)).EndInit();
+            this.menuStrip_main.ResumeLayout(false);
+            this.menuStrip_main.PerformLayout();
+            this.statusStrip_main.ResumeLayout(false);
+            this.statusStrip_main.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,23 +280,29 @@ namespace VisualTranslate
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button_loadOriginalLanguage;
-        private System.Windows.Forms.Button button_loadTargetLanguage;
-        private System.Windows.Forms.Label label_originalLanguage;
-        private System.Windows.Forms.Label label_targetLanguage;
-        private System.Windows.Forms.Button button_log;
-        private System.Windows.Forms.Button button_settings;
-        private System.Windows.Forms.Button button_saveAs;
-        private System.Windows.Forms.Button button_save;
-        private System.Windows.Forms.Label label_keyCount;
-        private System.Windows.Forms.Label label_saved;
-        private System.Windows.Forms.Label label_untranslatedCount;
-        private System.Windows.Forms.Button button_reload;
+        private System.Windows.Forms.DataGridView dataGridView_main;
+        private System.Windows.Forms.MenuStrip menuStrip_main;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_file;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_loadSourceLanguage;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_loadTargetLanguage;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_reload;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_save;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_saveAs;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_edit;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_tool;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_settings;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_openLogs;
+        private System.Windows.Forms.StatusStrip statusStrip_main;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripStatusLabel_totalKeys;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripStatusLabel_translated;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripStatusLabel_placeTaker;
+        private System.Windows.Forms.ToolStripProgressBar statusStripProgressBar_progress;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripStatusLabel_saved;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnKey;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnOriginalLanguage;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTargetLanguage;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnLocked;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripStatusLabel_progress;
     }
 }
 

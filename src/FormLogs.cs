@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VisualTranslate
+namespace DuoLang
 {
     public partial class FormLogs : Form
     {
@@ -19,12 +20,12 @@ namespace VisualTranslate
 
         private void FormLogs_Load(object sender, EventArgs e)
         {
-            textBox_logs.Lines = Settings.logs.ToString().Split('\n');
+            textBox_logs.Lines = Runtime.logs.ToString().Split('\n');
         }
 
         private void button_clear_Click(object sender, EventArgs e)
         {
-            Settings.logs.Clear();
+            Runtime.logs.Clear();
             textBox_logs.Lines = Array.Empty<string>();
         }
 
@@ -32,9 +33,12 @@ namespace VisualTranslate
         {
             SaveFileDialog saveFileDialog = new();
             saveFileDialog.FileName = DateTime.Now.ToString("yyyy-MM-dd_HHmmss") + ".log";
-            saveFileDialog.DefaultExt = "log";
-            saveFileDialog.ShowDialog();
-
+            saveFileDialog.DefaultExt = "日志文件|*.log";
+            var result = saveFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                File.WriteAllText(saveFileDialog.FileName, Runtime.logs.ToString());
+            }
         }
     }
 }

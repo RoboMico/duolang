@@ -1,5 +1,5 @@
 ﻿
-namespace VisualTranslate
+namespace DuoLang
 {
     partial class FormLogs
     {

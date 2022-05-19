@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VisualTranslate
+namespace DuoLang
 {
     public partial class FormEditing : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace VisualTranslate
+﻿namespace DuoLang
 {
     partial class FormEditing
     {
@@ -60,6 +60,8 @@
             this.ClientSize = new System.Drawing.Size(435, 300);
             this.Controls.Add(this.button_finish);
             this.Controls.Add(this.textBox_editing);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormEditing";
             this.Text = "编辑";
             this.ResumeLayout(false);

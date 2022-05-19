@@ -5,19 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VisualTranslate
+namespace DuoLang
 {
     public class Settings
     {
-        public static StringBuilder logs = new();
-        public enum LockedValueSaveSettings
-        {
-            Never = 0,
-            NotEmpty = 1,
-            Always = 2
-        }
-        public static bool ignoreSameValue = true;
-        public static LockedValueSaveSettings saveLockedValues = LockedValueSaveSettings.NotEmpty;
-        public static Color untranslatedColor = ColorTranslator.FromHtml("#D5B32B");
+        public bool ignoreSameValue = true;
+        public bool ignoreComments = true;
+        public Color untranslatedColor = ColorTranslator.FromHtml("#D5B32B");
     }
 }
