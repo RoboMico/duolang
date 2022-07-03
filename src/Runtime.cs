@@ -10,6 +10,6 @@ namespace DuoLang
     {
         public static Settings settings = new();
         public static StringBuilder logs = new();
-        public static Version VERSION { get { return new Version("0.1.0"); } }
+        public static string VERSION = "0.2.0-beta";
     }
 }

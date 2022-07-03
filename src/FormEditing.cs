@@ -16,6 +16,10 @@ namespace DuoLang
         public FormEditing(string defaultText)
         {
             InitializeComponent();
+            BackColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.background);
+            textBox_editing.BackColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.cell);
+            textBox_editing.ForeColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.text);
+            button_finish.ForeColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.text);
             textBox_editing.Text = defaultText;
             lastEditedText = defaultText;
         }

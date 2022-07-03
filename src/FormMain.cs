@@ -15,6 +15,7 @@ namespace DuoLang
         private string targetLanguageFile;
         public FormMain()
         {
+            //Load Setting from file
             try
             {
                 Runtime.settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText("settings.json"));
@@ -24,7 +25,25 @@ namespace DuoLang
                 Runtime.settings = new();
                 File.WriteAllText("settings.json", JsonConvert.SerializeObject(Runtime.settings));
             }
+            //Set style
+
             InitializeComponent();
+            foreach (Control control in this.Controls)
+            {
+                control.BackColor = ColorTranslator.FromHtml( Runtime.settings.colorSet.background);
+                control.ForeColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.text);
+            }
+            dataGridView_main.BackgroundColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.background);
+            DataGridViewCellStyle style = new()
+            {
+                BackColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.cell),
+                ForeColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.text),
+                SelectionBackColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.selectedCell),
+                SelectionForeColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.selectedText)
+            };
+            dataGridView_main.RowHeadersDefaultCellStyle = style;
+            dataGridView_main.ColumnHeadersDefaultCellStyle = style;
+            dataGridView_main.DefaultCellStyle = style;
         }
 
         private void UpdateDGV()
@@ -77,7 +96,7 @@ namespace DuoLang
             dataGridView_main.Rows[rowIndex].Cells["ColumnKey"].Style.ForeColor = Color.Black; //默认颜色
             if (targetEmpty) //未翻译
             {
-                dataGridView_main.Rows[rowIndex].Cells["ColumnKey"].Style.ForeColor = Runtime.settings.untranslatedColor;
+                dataGridView_main.Rows[rowIndex].Cells["ColumnKey"].Style.ForeColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.untranslated);
             }
         }
 
@@ -156,7 +175,7 @@ namespace DuoLang
             if (e.ColumnIndex == 2)
             {
                 string defaultString = (string)dataGridView_main.Rows[e.RowIndex].Cells[2].Value;
-                FormEditing formEditing = new FormEditing(defaultString);
+                FormEditing formEditing = new(defaultString);
                 formEditing.ShowDialog();
                 dataGridView_main.Rows[e.RowIndex].Cells[2].Value = formEditing.lastEditedText;
                 UpdateColor(e.RowIndex);

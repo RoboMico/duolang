@@ -16,6 +16,12 @@ namespace DuoLang
         public FormLogs()
         {
             InitializeComponent();
+            BackColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.background);
+            textBox_logs.BackColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.cell);
+            foreach (Control control in Controls)
+            {
+                control.ForeColor = ColorTranslator.FromHtml(Runtime.settings.colorSet.text);
+            }
         }
 
         private void FormLogs_Load(object sender, EventArgs e)

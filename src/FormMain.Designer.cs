@@ -29,6 +29,7 @@ namespace DuoLang
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView_main = new System.Windows.Forms.DataGridView();
             this.ColumnKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnOriginalLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,19 +63,27 @@ namespace DuoLang
             this.dataGridView_main.AllowUserToAddRows = false;
             this.dataGridView_main.AllowUserToDeleteRows = false;
             this.dataGridView_main.AllowUserToOrderColumns = true;
-            this.dataGridView_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_main.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_main.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_main.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_main.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnKey,
             this.ColumnOriginalLanguage,
             this.ColumnTargetLanguage});
-            this.dataGridView_main.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_main.EnableHeadersVisualStyles = false;
+            this.dataGridView_main.Location = new System.Drawing.Point(0, 25);
             this.dataGridView_main.Name = "dataGridView_main";
             this.dataGridView_main.ReadOnly = true;
             this.dataGridView_main.RowTemplate.Height = 25;
-            this.dataGridView_main.Size = new System.Drawing.Size(968, 621);
+            this.dataGridView_main.Size = new System.Drawing.Size(968, 649);
             this.dataGridView_main.TabIndex = 0;
             this.dataGridView_main.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_main_CellMouseDoubleClick);
             // 

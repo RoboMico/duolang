@@ -11,6 +11,8 @@ namespace DuoLang
     {
         public bool ignoreSameValue = true;
         public bool ignoreComments = true;
-        public Color untranslatedColor = ColorTranslator.FromHtml("#D5B32B");
+        public ColorSet colorSet = new();
+        public int backgroundAlpha = 100;
+        public bool loadPictures = false;
     }
 }
